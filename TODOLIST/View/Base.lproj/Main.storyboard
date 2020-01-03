@@ -32,7 +32,7 @@
                                     <action selector="switchList:" destination="BYZ-38-t0r" eventType="valueChanged" id="CYB-HK-nxq"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-9S-muZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-9S-muZ">
                                 <rect key="frame" x="20" y="61" width="280" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eMW-y9-1zX"/>
@@ -41,6 +41,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="saveTitle:" destination="BYZ-38-t0r" eventType="editingChanged" id="PVI-Si-9cv"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2dL-ds-h1N"/>
                                 </connections>
                             </textField>
@@ -56,7 +57,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-SW-GU6">
-                                                    <rect key="frame" x="20" y="10" width="45" height="30.5"/>
+                                                    <rect key="frame" x="20" y="10" width="280" height="30.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjO-lN-FGq">
                                                             <rect key="frame" x="0.0" y="0.5" width="30" height="30"/>
@@ -66,21 +67,33 @@
                                                             </constraints>
                                                             <color key="tintColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="unchecked"/>
+                                                            <connections>
+                                                                <action selector="tapToSwitchCheckedState:" destination="AsV-QS-Usu" eventType="touchUpInside" id="r8i-Ev-Kon"/>
+                                                            </connections>
                                                         </button>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q52-RN-rd3">
-                                                            <rect key="frame" x="40" y="3.5" width="5" height="24"/>
+                                                            <rect key="frame" x="40" y="3.5" width="240" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="saveThingsToDo:" destination="AsV-QS-Usu" eventType="editingChanged" id="fGE-7O-lEH"/>
+                                                                <outlet property="delegate" destination="BYZ-38-t0r" id="mNo-4E-l1j"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aeP-SW-GU6" secondAttribute="trailing" constant="20" id="7RK-kz-Fia"/>
                                                 <constraint firstItem="aeP-SW-GU6" firstAttribute="top" secondItem="AHN-Re-Uvq" secondAttribute="top" constant="10" id="EM0-FO-aS0"/>
                                                 <constraint firstItem="aeP-SW-GU6" firstAttribute="centerY" secondItem="AHN-Re-Uvq" secondAttribute="centerY" id="WBN-HO-2f1"/>
                                                 <constraint firstItem="aeP-SW-GU6" firstAttribute="leading" secondItem="AHN-Re-Uvq" secondAttribute="leading" constant="20" id="vKk-2B-QIj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkedButton" destination="GjO-lN-FGq" id="SgI-9H-M1W"/>
+                                            <outlet property="toDoText" destination="Q52-RN-rd3" id="tAV-cX-imK"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addCell" id="ifg-mw-8T7" customClass="AddCell" customModule="TODOLIST" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="78.5" width="320" height="50.5"/>
@@ -97,6 +110,9 @@
                                                     </constraints>
                                                     <color key="tintColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="add"/>
+                                                    <connections>
+                                                        <action selector="tapToAddData:" destination="ifg-mw-8T7" eventType="touchUpInside" id="l2O-gg-I6l"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -105,6 +121,9 @@
                                                 <constraint firstItem="6vk-QY-cGE" firstAttribute="top" secondItem="g7O-y3-bP4" secondAttribute="top" constant="10" id="m8T-Wz-2IC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addButton" destination="6vk-QY-cGE" id="wad-ea-LNf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
