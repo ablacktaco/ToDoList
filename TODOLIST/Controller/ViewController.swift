@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBAction func switchList(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0..<savedData.lists.count:
+            sender.tintColor = savedData.listsColor[sender.selectedSegmentIndex]
             titleTextField.text = savedData.lists[sender.selectedSegmentIndex].title
             titleTextField.textColor = savedData.listsColor[sender.selectedSegmentIndex]
         default: break
@@ -75,6 +76,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AddCell
             cell.selectionStyle = .none
             
+            cell.toDoListTable = tableView
             cell.index = listSegmented.selectedSegmentIndex
             cell.setTintColor()
             

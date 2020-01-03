@@ -32,7 +32,7 @@
                                     <action selector="switchList:" destination="BYZ-38-t0r" eventType="valueChanged" id="CYB-HK-nxq"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-9S-muZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" placeholder="Enter title" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-9S-muZ">
                                 <rect key="frame" x="20" y="61" width="280" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eMW-y9-1zX"/>
@@ -71,7 +71,7 @@
                                                                 <action selector="tapToSwitchCheckedState:" destination="AsV-QS-Usu" eventType="touchUpInside" id="r8i-Ev-Kon"/>
                                                             </connections>
                                                         </button>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q52-RN-rd3">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the thing to check" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q52-RN-rd3">
                                                             <rect key="frame" x="40" y="3.5" width="240" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits"/>

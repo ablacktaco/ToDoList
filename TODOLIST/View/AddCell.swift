@@ -11,11 +11,13 @@ import UIKit
 class AddCell: UITableViewCell {
     
     let savedData = SavedData.shared
+    var toDoListTable: UITableView?
     var index: Int = 0
     
     @IBOutlet var addButton: UIButton!
     @IBAction func tapToAddData(_ sender: UIButton) {
         savedData.lists[index].data.append(PageModel.Data())
+        toDoListTable?.reloadData()
     }
     
 }
