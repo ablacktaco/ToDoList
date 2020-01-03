@@ -6,7 +6,7 @@
 
 * 可編輯標題，新增待辦事項
 
-![](https://i.imgur.com/ppshF4f.gif)
+![](https://github.com/ablacktaco/ToDoList/blob/master/add.gif)
 
 * 可check/uncheck待辦事項
 * 滑動刪除待辦事項
