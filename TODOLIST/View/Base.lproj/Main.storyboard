@@ -33,7 +33,7 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" placeholder="Enter title" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-9S-muZ">
-                                <rect key="frame" x="20" y="61" width="280" height="70"/>
+                                <rect key="frame" x="20" y="66" width="280" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="eMW-y9-1zX"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uft-Qa-Ead">
-                                <rect key="frame" x="0.0" y="141" width="320" height="427"/>
+                                <rect key="frame" x="0.0" y="146" width="320" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="toDoCell" id="AsV-QS-Usu" customClass="ToDoCell" customModule="TODOLIST" customModuleProvider="target">
@@ -138,7 +138,7 @@
                             <constraint firstItem="a2w-Qb-HoP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3wa-d0-M7k"/>
                             <constraint firstItem="xc1-9S-muZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="58Z-uc-w7N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xc1-9S-muZ" secondAttribute="trailing" constant="20" id="5dt-rO-ZSm"/>
-                            <constraint firstItem="xc1-9S-muZ" firstAttribute="top" secondItem="a2w-Qb-HoP" secondAttribute="bottom" constant="10" id="EuL-8q-P2l"/>
+                            <constraint firstItem="xc1-9S-muZ" firstAttribute="top" secondItem="a2w-Qb-HoP" secondAttribute="bottom" constant="15" id="EuL-8q-P2l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uft-Qa-Ead" secondAttribute="bottom" id="Oi5-k8-Rn1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a2w-Qb-HoP" secondAttribute="trailing" constant="20" id="UiB-Fz-H9T"/>
                             <constraint firstItem="a2w-Qb-HoP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="YkX-hI-7Uh"/>

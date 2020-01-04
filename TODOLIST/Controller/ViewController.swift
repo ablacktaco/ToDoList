@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         let userInfo = notification.userInfo!
         let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let intersection = keyboardSize.intersection(self.view.frame)
-        view.frame.size = CGSize(width: view.frame.width, height: view.frame.height - intersection.height)
+        view.frame.size = CGSize(width: view.frame.width, height: view.frame.height - intersection.height + 1)
     }
     @objc func whenKeyboardHide(_ notification: Notification) {
         view.frame.size = CGSize(width: view.frame.width, height: UIScreen.main.bounds.height)
@@ -94,7 +94,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             savedData.lists[listSegmented.selectedSegmentIndex].data.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
         }
     }
     
